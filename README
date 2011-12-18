@@ -1,0 +1,43 @@
+   ****************************************************************************
+	 *** b32
+   ****************************************************************************
+	This project consists of several functions utilizing base32 numbers.
+	
+	Numbers are represented by alpha-numeric strings.
+	
+	The digits for these numbers are,from ( 0 to 31 ):
+	(0 1 2 3 4 5 6 7 8 9 a b c d e f g h j k m n p r s t u v w x y z)
+	
+	note that the letters i,l, and o are NOT present so there can be no 	confusion with 1 and 0.  The digits are case insensitive.  All	functions force strings to llower case and check that strings only 	contain accetable charactors before processing.
+	
+	strings of equal length will alphabetize in numerical order.
+
+   ****************************************************************************
+	
+	bump32(kount,grow) 
+	   kount->b32 string of any length
+	   grow-> boolean
+	   
+	   returns-> b32 string = kount+1
+		
+	   kount can be any length base32 string.  function increments
+	   kount by one and returns new value UNLESS length of kount has changed.
+	   if length has changed and grow is true kount is returned, if grow is 
+	   false an OverflowError  is generated 	
+   ****************************************************************************
+
+	DecTob32(num)
+		num-> integer
+		
+		returns -> b32 string
+		
+   ****************************************************************************
+   
+  b32ToDec(kount)
+  	kount-> b32 string
+  	
+  	returns -> integer
+  	
+   ****************************************************************************
+
+		
